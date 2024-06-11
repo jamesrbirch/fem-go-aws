@@ -1,9 +1,17 @@
 package main
 
 import (
+	"femBasics/imports"
 	"fmt"
 )
 
 func main() {
-	fmt.Println("hello world")
+	newTicket := imports.Ticket{
+		Id:    123,
+		Event: "FEM course",
+	}
+
+	newTicket.PrintEvent()
+
+	fmt.Println(newTicket)
 }

@@ -27,6 +27,24 @@ func main() {
 	myPerson := NewPerson("James", 42)
 	myPerson.changeName("lp")
 
-	fmt.Printf("This is my person %+v", myPerson)
+	// declare a memory pointer
+	a := 7
+	b := &a
+
+	// dereference the memory allocation and store 9
+	*b = 9
+	fmt.Println(b)
+
+	fmt.Printf("This is my person %+v\n", myPerson)
+
+	mySlice := []int{
+		1, 2, 3,
+	}
+
+	for index, _ := range mySlice {
+		mySlice[index]++
+	}
+
+	fmt.Println(mySlice)
 
 }
